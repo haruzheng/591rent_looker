@@ -40,7 +40,7 @@ def file_init():
 def file_write(context):
 	global file_ptr
 
-	file_ptr.write(context + '\n')
+	file_ptr.write(context.encode('big5','replace').decode('big5','replace') + '\n')
 
 def file_end():
 	global file_ptr
